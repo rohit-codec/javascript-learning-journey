@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Marks & Grade Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">JAVASCRIPT PROJECT 01</p>
+      <h1>Student Marks <span>& Grade Calculator</span></h1>
+      <p class="subtitle">Enter five subject marks to calculate the total, percentage, grade, and result.</p>
+    </header>
+
+    <section class="card">
+      <h2>Student details</h2>
+      <p class="muted">Each subject is marked out of 100.</p>
+      <form id="marks-form" novalidate>
+        <label for="student-name">Student name</label>
+        <input id="student-name" type="text" placeholder="e.g. Rohit" autocomplete="name">
+
+        <div class="grid">
+          <div><label for="maths">Mathematics</label><input id="maths" type="number" min="0" max="100" step="1" placeholder="0–100"></div>
+          <div><label for="science">Science</label><input id="science" type="number" min="0" max="100" step="1" placeholder="0–100"></div>
+          <div><label for="english">English</label><input id="english" type="number" min="0" max="100" step="1" placeholder="0–100"></div>
+          <div><label for="computer">Computer</label><input id="computer" type="number" min="0" max="100" step="1" placeholder="0–100"></div>
+          <div><label for="social-science">Social Science</label><input id="social-science" type="number" min="0" max="100" step="1" placeholder="0–100"></div>
+        </div>
+
+        <p id="error-message" class="error" role="alert" aria-live="polite"></p>
+        <div class="actions">
+          <button type="submit">Calculate result →</button>
+          <button type="reset" class="secondary">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="result-card" class="card result hidden" aria-live="polite">
+      <div class="result-heading">
+        <div><p class="eyebrow">CALCULATION RESULT</p><h2>Result for <span id="result-name"></span></h2></div>
+        <span id="result-badge" class="badge">PASS</span>
+      </div>
+      <div class="stats">
+        <article><p>Total marks</p><strong id="total-marks">0 / 500</strong></article>
+        <article><p>Percentage</p><strong id="percentage">0%</strong></article>
+        <article><p>Grade</p><strong id="grade">A</strong></article>
+      </div>
+      <div class="progress-label"><span>Overall performance</span><strong id="progress-text">0%</strong></div>
+      <div class="progress-track" role="progressbar" aria-label="Overall percentage" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-track"><div id="progress-bar"></div></div>
+      <p id="result-message" class="message"></p>
+    </section>
+    <footer>Built with HTML, CSS & JavaScript · Project 01</footer>
+  </main>
+</body>
+</html>
