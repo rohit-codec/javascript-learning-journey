@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Banking Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <p class="tag">JAVASCRIPT PROJECT 02</p>
+        <h1>Banking Calculator</h1>
+        <section class="balance">
+            <p>Demo balance</p>
+            <h2 id="balance">₹10,000.00</h2><small>No real money is involved.</small>
+        </section>
+        <section class="card"><label>Amount (₹)<input id="amount" type="number" min="0.01" step="0.01"
+                    placeholder="Enter amount"></label><button id="deposit">Deposit</button><button id="withdraw"
+                class="secondary">Withdraw</button>
+            <p id="message" role="status">Choose a transaction.</p>
+        </section>
+        <section class="card">
+            <h2>Simple interest calculator</h2><label>Annual rate (%)<input id="rate" type="number" min="0" max="100"
+                    value="4"></label><label>Months<input id="months" type="number" min="1" value="12"></label><button
+                id="interest">Calculate interest</button>
+            <p id="interest-result"></p>
+        </section>
+        <section class="card">
+            <h2>History</h2>
+            <ul id="history">
+                <li>No transactions yet.</li>
+            </ul><button id="reset" class="secondary">Reset account</button>
+        </section>
+        <footer>HTML · CSS · JavaScript</footer>
+    </main>
+</body>
+
+</html>
