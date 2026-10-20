@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Text Analyzer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <p class="tag">JAVASCRIPT PROJECT 05</p>
+      <h1>Text Analyzer</h1>
+      <p class="muted">Explore your text and transform it with JavaScript.</p>
+      <section class="card">
+        <label for="text">Enter text</label
+        ><textarea id="text" rows="7" placeholder="Type or paste text here...">
+JavaScript is powerful. JavaScript is popular, and JavaScript is fun to learn!</textarea
+        ><button id="analyze">Analyze</button
+        ><button id="clear" class="secondary">Clear</button
+        ><button id="sample" class="secondary">Load sample</button>
+      </section>
+      <section class="stats">
+        <article><span>Characters</span><strong id="chars">0</strong></article>
+        <article>
+          <span>No whitespace</span><strong id="no-space">0</strong>
+        </article>
+        <article><span>Words</span><strong id="words">0</strong></article>
+        <article>
+          <span>Sentences</span><strong id="sentences">0</strong>
+        </article>
+        <article>
+          <span>Reading time</span><strong id="time">0 min</strong>
+        </article>
+        <article>
+          <span>Longest word</span><strong id="longest">—</strong>
+        </article>
+      </section>
+      <section class="card">
+        <h2>Text tools</h2>
+        <button data-tool="upper">UPPERCASE</button
+        ><button data-tool="lower">lowercase</button
+        ><button data-tool="reverse" class="secondary">Reverse</button
+        ><button data-tool="copy" class="secondary">Copy</button>
+        <p id="message" role="status">Ready.</p>
+        <h3>Most frequent word</h3>
+        <p id="frequent">—</p>
+      </section>
+      <footer>HTML · CSS · JavaScript</footer>
+    </main>
+  </body>
+</html>
