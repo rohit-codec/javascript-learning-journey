@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Student Management</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <p class="tag">PROJECT 06</p>
+      <h1>Student Management</h1>
+      <p>Manage student records, search, sort and calculate grades.</p>
+      <section class="card">
+        <h2>Add student</h2>
+        <form id="form">
+          <input id="name" required placeholder="Student name" /><input
+            id="roll"
+            required
+            placeholder="Roll number"
+          /><input
+            id="marks"
+            type="number"
+            min="0"
+            max="100"
+            step="1"
+            required
+            placeholder="Marks / 100"
+          /><button>Add student</button>
+        </form>
+        <p id="message" role="status"></p>
+      </section>
+      <section class="card">
+        <div class="toolbar">
+          <h2>Students (<span id="count">0</span>)</h2>
+          <input id="search" placeholder="Search name or roll" />
+        </div>
+        <label
+          >Sort
+          <select id="sort">
+            <option value="name">Name A–Z</option>
+            <option value="high">Marks high to low</option>
+            <option value="low">Marks low to high</option>
+          </select></label
+        >
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Roll</th>
+                <th>Marks</th>
+                <th>Grade</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="list"></tbody>
+          </table>
+        </div>
+        <p id="empty">No students yet.</p>
+      </section>
+    </main>
+  </body>
+</html>
