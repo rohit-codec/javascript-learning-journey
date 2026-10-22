@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Product Inventory</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <p class="tag">PROJECT 07</p>
+      <h1>Product Inventory</h1>
+      <p>Manage products, stock levels and inventory value.</p>
+      <section class="card">
+        <h2>Add product</h2>
+        <form id="form">
+          <input id="name" required placeholder="Product name" /><input
+            id="category"
+            required
+            placeholder="Category"
+          /><input
+            id="price"
+            type="number"
+            min="0.01"
+            step="0.01"
+            required
+            placeholder="Price ₹"
+          /><input
+            id="stock"
+            type="number"
+            min="0"
+            step="1"
+            required
+            placeholder="Stock quantity"
+          /><button>Add product</button>
+        </form>
+        <p id="message" role="status"></p>
+      </section>
+      <section class="summary">
+        <article>Products<strong id="count">0</strong></article>
+        <article>Total units<strong id="units">0</strong></article>
+        <article>Inventory value<strong id="value">₹0</strong></article>
+      </section>
+      <section class="card">
+        <input id="search" placeholder="Search name or category" />
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Value</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="list"></tbody>
+          </table>
+        </div>
+        <p id="empty">No products yet.</p>
+      </section>
+    </main>
+  </body>
+</html>
