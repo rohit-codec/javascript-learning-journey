@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <p class="tag">PHASE 2 PROJECT</p>
+        <h1>Expense Tracker</h1>
+        <p class="muted">Practice project for JavaScript Phase 2.</p>
+        <section class="card">
+            <form id="form"><input id="title" required placeholder="Expense name"><input id="amount" type="number"
+                    min="0.01" step="0.01" required placeholder="Amount"><button>Add expense</button></form>
+            <h2>Total: ₹<span id="total">0</span></h2>
+            <ul id="list"></ul>
+        </section>
+        <footer>HTML · CSS · JavaScript</footer>
+    </main>
+</body>
+
+</html>
