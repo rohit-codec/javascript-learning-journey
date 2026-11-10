@@ -1,1 +1,42 @@
-const products=[{id:1,name:'Laptop',price:65000,category:'Computers'},{id:2,name:'Wireless Mouse',price:799,category:'Accessories'},{id:3,name:'Monitor',price:12000,category:'Computers'},{id:4,name:'Keyboard',price:2499,category:'Accessories'}],cart=new Map(),root=document.querySelector('#products');function updateCart(){document.querySelector('#cart').textContent=[...cart.values()].reduce((a,b)=>a+b,0)}function render(){root.replaceChildren();const q=document.querySelector('#search').value.toLowerCase();products.filter(p=>(p.name+' '+p.category).toLowerCase().includes(q)).forEach(p=>{const card=document.createElement('article'),h=document.createElement('h3'),detail=document.createElement('p'),price=document.createElement('strong'),b=document.createElement('button');h.textContent=p.name;detail.textContent=p.category;price.textContent=new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR'}).format(p.price);b.textContent='Add to cart';b.onclick=()=>{cart.set(p.id,(cart.get(p.id)||0)+1);updateCart()};card.append(h,detail,price,b);root.append(card)})}document.querySelector('#search').oninput=render;render();
+const products = [
+    { id: 1, name: "Laptop", price: 65000, category: "Computers" },
+    { id: 2, name: "Wireless Mouse", price: 799, category: "Accessories" },
+    { id: 3, name: "Monitor", price: 12000, category: "Computers" },
+    { id: 4, name: "Keyboard", price: 2499, category: "Accessories" },
+  ],
+  cart = new Map(),
+  root = document.querySelector("#products");
+function updateCart() {
+  document.querySelector("#cart").textContent = [...cart.values()].reduce(
+    (a, b) => a + b,
+    0,
+  );
+}
+function render() {
+  root.replaceChildren();
+  const q = document.querySelector("#search").value.toLowerCase();
+  products
+    .filter((p) => (p.name + " " + p.category).toLowerCase().includes(q))
+    .forEach((p) => {
+      const card = document.createElement("article"),
+        h = document.createElement("h3"),
+        detail = document.createElement("p"),
+        price = document.createElement("strong"),
+        b = document.createElement("button");
+      h.textContent = p.name;
+      detail.textContent = p.category;
+      price.textContent = new Intl.NumberFormat("en-IN", {
+        style: "currency",
+        currency: "INR",
+      }).format(p.price);
+      b.textContent = "Add to cart";
+      b.onclick = () => {
+        cart.set(p.id, (cart.get(p.id) || 0) + 1);
+        updateCart();
+      };
+      card.append(h, detail, price, b);
+      root.append(card);
+    });
+}
+document.querySelector("#search").oninput = render;
+render();
