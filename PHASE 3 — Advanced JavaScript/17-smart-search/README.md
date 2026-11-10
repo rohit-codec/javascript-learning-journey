@@ -6,7 +6,7 @@ Practice filtering, debouncing, and caching search results.
 Open `index.html` in a browser or use VS Code Live Server. Some browser APIs require localhost, HTTPS, or permission.
 
 ## Concepts practiced
-Higher-order functions, filter, Map caching, debouncing, events.
+Higher-order functions, filter, Map caching, debouncing , events.
 
 ## Files
 - `index.html` — page structure

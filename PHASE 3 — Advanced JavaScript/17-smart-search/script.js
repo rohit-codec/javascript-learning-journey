@@ -1,4 +1,4 @@
-const products = [
+const products =[
   "Laptop",
   "Wireless Mouse",
   "Mechanical Keyboard",
