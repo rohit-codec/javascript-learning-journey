@@ -12,3 +12,4 @@ Map, Set, generators, property descriptors, iteration.
 - `index.html` — page structure
 - `style.css` — styling
 - `script.js` — behavior
+
