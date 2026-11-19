@@ -8,7 +8,8 @@ Open `index.html` in a browser or use VS Code Live Server. Some browser APIs req
 ## Concepts practiced
 Clipboard API, URL, URLSearchParams, Geolocation, IntersectionObserver.
 
+
 ## Files
 - `index.html` — page structure
 - `style.css` — styling
-- `script.js` — behavior
+- `script.js` — behavior 
