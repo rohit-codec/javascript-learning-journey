@@ -8,6 +8,7 @@ Open `index.html` in a browser or use VS Code Live Server. Some browser APIs req
 ## Concepts practiced
 Search/filter, arrays, pagination, DOM rendering, event handlers.
 
+
 ## Files
 - `index.html` — page structure
 - `style.css` — styling
